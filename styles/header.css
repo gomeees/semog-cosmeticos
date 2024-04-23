@@ -1,137 +1,143 @@
-.cabecalho__menu-ham {
-  height: 50px;
-  width: 50px;
-  background-image: url("../img/menu.svg");
-  display: inline-block;
-  background-position: center;
-  background-repeat: no-repeat;
+.cabecalho {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   position: relative; /* movimentar o menu hamb. */
+   background-color: var(--cinza);
+   position: relative;
+   padding: 0em 0em;
 }
 
-.cabecalho {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative; /* movimentar o menu hamb. */
-  background-color: var(--cinza);
-  position: relative;
-  padding: 0.5em 0em;
+.cabecalho__menu-ham {
+   height: 70px;
+   width: 50px;
+   background-image: url("../img/menu.svg");
+   display: inline-block;
+   background-position: center;
+   background-repeat: no-repeat;
 }
 
 .container {
-  display: flex;
-  align-items: center;
-  gap: 0.7em;
-  padding-right: 0.5em;
+   display: flex;
+   align-items: center;
+   gap: 0.7em;
+   padding-right: 0.5em;
 }
 
 .container__rotulo {
-  padding: 0.3em 0.3em 0.1em 0.3em;
+   padding: 0.3em 0.3em 0.1em 0.3em;
 }
+
 .container__botao:checked ~ .container__rotulo {
-  background: var(--roxo);
+   background: var(--roxo);
 }
 
 .container__imagem {
-  padding: 0.5em 0.5em;
+   padding: 0.5em 0.5em;
 }
 
 .container__logo {
-  width: 100%;
-  padding: 0;
+   width: 40%;
+   padding: 0;
 }
 
 .container__icone:hover {
-  opacity: 0.5;
+   opacity: 0.5;
 }
 
 .lista-menu {
-  display: none;
-  position: absolute; /* movimentar o menu hamb. */
-  top: 100%; /* movimentar o menu hamb. para baixo */
-  background-color: var(--roxo);
-  padding: 0.5em 0;
-  width: 60vw;
+   display: none;
+   position: absolute; /* movimentar o menu hamb. */
+   top: 100%; /* movimentar o menu hamb. para baixo */
+   background-color: var(--roxo);
+   padding: 0.5em 0;
+   width: 60vw;
+   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .container__botao:checked ~ .lista-menu {
-  display: block;
+   display: block;
 }
 
 .container__botao {
-  display: none;
+   display: none;
 }
 
 .lista-menu__item {
-  padding: 0.5em;
+   padding: 0.5em;
 }
 
 .item__link {
-  color: var(--branco);
-  text-decoration: none;
-  text-transform: uppercase;
+   color: var(--branco);
+   text-decoration: none;
+   text-transform: uppercase;
 }
 
 .opcoes {
-  display: none;
+   display: none;
 }
 
 .logo-pc {
-  display: none;
+   display: none;
 }
 
 @media screen and (min-width: 1024px) {
-  .cabecalho__menu-ham {
-    display: none;
-  }
+   .container__rotulo {
+      display: none;
+   }
 
-  .logo-pc {
-    display: block;
-  }
+   .logo-pc {
+      display: block;
+      padding-left: 1em;
+      width: 100%;
+   }
 
-  .logo-cell {
-    display: none;
-  }
+   .logo-cell {
+      display: none;
+   }
 
-  .opcoes {
-    display: flex;
-  }
+   .opcoes {
+      display: flex;
+   }
 
-  .opcoes-itens {
-    padding: 0em 1em;
-    transition: 0.1s;
-  }
+   .opcoes-itens {
+      padding: 0em 1em;
+      transition: 0.1s;
+   }
 
-  .opcoes-link {
-    text-decoration: none;
-  }
+   .opcoes-link {
+      text-decoration: none;
+   }
 
-  .opcoes-texto {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: var(--fonte-principal);
-    font-weight: 600;
-    font-size: 20px;
-    color: var(--preto);
-    transition: 0.1s;
-  }
+   .opcoes-texto {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: var(--fonte-principal);
+      font-weight: 600;
+      font-size: 20px;
+      color: var(--preto);
+      transition: 0.1s;
+   }
 }
 
 @media screen and (min-width: 1366px) {
-  .cabecalho {
-    padding: 0;
-  }
+   .cabecalho {
+      padding: 0;
+   }
 
-  .opcoes-itens {
-    padding: 2em 1em;
-  }
+   .opcoes-itens {
+      padding: 2em 1em;
+   }
 
-  .opcoes-itens:hover {
-    background-color: var(--roxo);
-    transition: 0.1s;
-  }
+   .opcoes-itens:hover {
+      background-color: var(--roxo);
+      transition: 0.1s;
+   }
 
-  .opcoes-itens:hover > .opcoes-texto {
-    color: var(--branco);
-    transition: 0.1s;
-  }
+   .opcoes-itens:hover > .opcoes-texto {
+      color: var(--branco);
+      transition: 0.1s;
+   }
 }
