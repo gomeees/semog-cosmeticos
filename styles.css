@@ -6,6 +6,7 @@
 
 :root {
    --cor-de-fundo: #f3ebde;
+   --cor-de-fundo2: #e6d5b9;
    --cor-titulo: #d1bb9e;
    --cor-titulo-fonte: #003c43;
    --roxo: #5e00b6;
@@ -22,4 +23,5 @@ body {
    font-family: var(--fonte-principal);
    font-weight: 400;
    font-size: 18px;
+   box-sizing: border-box;
 }
